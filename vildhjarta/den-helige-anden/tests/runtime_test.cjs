@@ -8,7 +8,7 @@ const text = fs.readFileSync(src,'utf8').replace('$score:', 'globalThis.score ='
 class Pattern {
   constructor(query) {this.query = query;}
 }
-for(const name of ['bank','gain','orbit','s','distort','lpf','pan','room','delay','delaytime','midichan','midi']) {
+for(const name of ['bank','gain','orbit','s','clip','distort','lpf','pan','room','delay','delaytime','midichan','midi']) {
  Pattern.prototype[name] = function() { return this; };
 }
 class TimeSpan {constructor(begin,end){this.begin=begin;this.end=end;}}
