@@ -379,16 +379,16 @@ function scorePart(track,midiMode){{
 function webPart(i,p){{
   switch(i){{
     case 0: return p.bank('RolandTR909').gain(.58).orbit(0);
-    case 1: return p.s('gm_synth_bass_1').lpf(2200).gain(.65).pan(.5).orbit(1);
-    case 2: return p.s('gm_electric_guitar_muted').distort('3:.32').lpf(6000).gain(.34).pan(.17).orbit(2);
-    case 3: return p.s('gm_electric_guitar_muted').distort('3:.32').lpf(6000).gain(.34).pan(.83).orbit(3);
-    case 4: return p.s('gm_electric_guitar_muted').distort('3.5:.3').lpf(5300).gain(.28).pan(.12).orbit(4);
-    case 5: return p.s('gm_electric_guitar_muted').distort('3.5:.3').lpf(5300).gain(.28).pan(.88).orbit(5);
-    case 6: return p.s('gm_electric_guitar_clean').room(.42).gain(.43).pan(.2).orbit(6);
-    case 7: return p.s('gm_electric_guitar_clean').room(.42).gain(.43).pan(.8).orbit(7);
-    case 8: return p.s('gm_electric_guitar_clean').delay(.36).delaytime(.3).room(.48).gain(.28).pan(.6).orbit(8);
-    case 9: return p.s('gm_electric_guitar_clean').delay(.45).delaytime(.4).room(.65).gain(.30).pan(.28).orbit(9);
-    default:return p.s('gm_electric_guitar_clean').room(.7).gain(.30).pan(.72).orbit(10);
+    case 1: return p.s('gm_synth_bass_1').clip(1).lpf(2200).gain(.65).pan(.5).orbit(1);
+    case 2: return p.s('gm_electric_guitar_muted').clip(1).distort('3:.32').lpf(6000).gain(.34).pan(.17).orbit(2);
+    case 3: return p.s('gm_electric_guitar_muted').clip(1).distort('3:.32').lpf(6000).gain(.34).pan(.83).orbit(3);
+    case 4: return p.s('gm_electric_guitar_muted').clip(1).distort('3.5:.3').lpf(5300).gain(.28).pan(.12).orbit(4);
+    case 5: return p.s('gm_electric_guitar_muted').clip(1).distort('3.5:.3').lpf(5300).gain(.28).pan(.88).orbit(5);
+    case 6: return p.s('gm_electric_guitar_clean').clip(1).room(.42).gain(.43).pan(.2).orbit(6);
+    case 7: return p.s('gm_electric_guitar_clean').clip(1).room(.42).gain(.43).pan(.8).orbit(7);
+    case 8: return p.s('gm_electric_guitar_clean').clip(1).delay(.36).delaytime(.3).room(.48).gain(.28).pan(.6).orbit(8);
+    case 9: return p.s('gm_electric_guitar_clean').clip(1).delay(.45).delaytime(.4).room(.65).gain(.30).pan(.28).orbit(9);
+    default:return p.s('gm_electric_guitar_clean').clip(1).room(.7).gain(.30).pan(.72).orbit(10);
   }}
 }}
 
